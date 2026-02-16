@@ -1,7 +1,7 @@
-/* Una Compañia de venta de carros usados, paga a su personal de ventas un salario de $1000
-mensuales, más una comisión de $150 por cada carro vendido, más el 5% del valor de la venta 
-por carro. Cada mes el capturista de la empresa ingresa en la computadora los datos pertinentes. 
-Hacer un programa que calcule e imprima el salario mensual del vendedor. */
+/* La calificación final de un estudiante de informática se calcula con base a las calificaciones 
+de cuatro aspectos de su rendimiento académico: participación, primer examen parcial, segundo examen parcial
+y examen final. Sabiendo que las calificaciones anteriores entran a la calificación final con ponderaciones 
+del 10%, 25%, 25% y 40%. Hacer un programa que calcule e imprima la calificación final por un estudiante. */
 
 import java.util.Scanner;
 
@@ -9,18 +9,27 @@ public class Operadores {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-            final int salario = 1000;
-            int nCarrosVendidos;
-            float costeCarro, salarioTotal;
+        float participacion, primerExamen, segundoExamen, examenFinal, notaFinal;
 
-            System.out.print("Digite el total de carros vendidos: ");
-            nCarrosVendidos = entrada.nextInt();
-            System.out.print("Digite el coste del carro: ");
-            costeCarro = entrada.nextFloat();
 
-            salarioTotal = salario + (nCarrosVendidos * 150) + (0.05f*costeCarro*nCarrosVendidos);
+        System.out.print("Digite la nota de participación: ");
+        participacion = entrada.nextFloat();
+        System.out.println("Digite la nota del primer examen parcial: ");
+        primerExamen = entrada.nextFloat();
+        System.out.println("Digite la nota del segundo examen parcial: ");
+        segundoExamen = entrada.nextFloat();
+        System.out.println("Digite la nota del examen final: ");
+        examenFinal = entrada.nextFloat();
 
-            System.out.println("\nEl salario del empleado es: "+salarioTotal);
+        participacion *= 0.10f;
+        primerExamen *= 0.25f;
+        segundoExamen *= 0.25f;
+        examenFinal *= 0.40f;
+
+        notaFinal = participacion + primerExamen + segundoExamen + examenFinal;
+
+        System.out.println("La nota final del estudiante es: "+notaFinal);
+        
     }
 
 }
