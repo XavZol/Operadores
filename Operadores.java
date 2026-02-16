@@ -6,17 +6,17 @@ public class Operadores {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        float nota1, nota2, nota3, suma;
+        int horasSemanales;
+        float salarioHora, salarioTotal;
 
-        // Guardamos las tres notas
-        System.out.println("Digite las tres calificaciones: ");
-        nota1 = entrada.nextFloat();
-        nota2 = entrada.nextFloat();
-        nota3 = entrada.nextFloat();
+        System.out.print("Digite las horas semanales trabajadas: ");
+        horasSemanales = entrada.nextInt();
+        System.out.print("Digite el salario que gana por hora: ");
+        salarioHora = entrada.nextFloat();
 
-        suma = nota1 + nota2 + nota3;
+        salarioTotal = horasSemanales * salarioHora;
 
-        System.out.print("\nEl resultado de la suma es: "+suma);
+        System.out.println("\nEl salario semanal es: "+salarioTotal);
     }
 
 }
