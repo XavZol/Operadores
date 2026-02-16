@@ -1,6 +1,7 @@
-/*Luis tiene la mitad de lo que posee Guillermo.
-Juan tiene la mitad de lo que poseen Luis y Guillermo juntos
-Hacer un programa que calcule e imprima la cantidad de dinero que tienen entre los tres */
+/* Una Compañia de venta de carros usados, paga a su personal de ventas un salario de $1000
+mensuales, más una comisión de $150 por cada carro vendido, más el 5% del valor de la venta 
+por carro. Cada mes el capturista de la empresa ingresa en la computadora los datos pertinentes. 
+Hacer un programa que calcule e imprima el salario mensual del vendedor. */
 
 import java.util.Scanner;
 
@@ -8,17 +9,18 @@ public class Operadores {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        float guillermo, luis, juan, total;
+            final int salario = 1000;
+            int nCarrosVendidos;
+            float costeCarro, salarioTotal;
 
-        System.out.print("Digite la cantidad de dinero que tiene Guillermo: ");
-        guillermo = entrada.nextFloat();
+            System.out.print("Digite el total de carros vendidos: ");
+            nCarrosVendidos = entrada.nextInt();
+            System.out.print("Digite el coste del carro: ");
+            costeCarro = entrada.nextFloat();
 
-        luis = guillermo/2;
-        juan = (guillermo+luis)/2;
+            salarioTotal = salario + (nCarrosVendidos * 150) + (0.05f*costeCarro*nCarrosVendidos);
 
-        total = guillermo+luis+juan;
-
-        System.out.println("\nLa cantidad de dinero entre los 3 es: "+total);
+            System.out.println("\nEl salario del empleado es: "+salarioTotal);
     }
 
 }
