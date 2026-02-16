@@ -1,15 +1,22 @@
 
+import java.util.Scanner;
+
+
 public class Operadores {
 
     public static void main(String[] args) {
-        int x = 5, y;
-        // decremento o aumento, colocandolo de subfijo o prefijo
-        y= x++;
+        Scanner entrada = new Scanner(System.in);
+        float nota1, nota2, nota3, suma;
 
-        System.out.println(x);
-        System.out.println(y);
-        
+        // Guardamos las tres notas
+        System.out.println("Digite las tres calificaciones: ");
+        nota1 = entrada.nextFloat();
+        nota2 = entrada.nextFloat();
+        nota3 = entrada.nextFloat();
 
+        suma = nota1 + nota2 + nota3;
+
+        System.out.print("\nEl resultado de la suma es: "+suma);
     }
 
 }
