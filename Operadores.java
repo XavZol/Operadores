@@ -1,20 +1,26 @@
-/* Hacer un programa que calcule el cuadrado de  una suma  (a+b)^2 = a^2 + 2ab + b^2*/
+/* Construir un programa que calcule y muestre por pantalla las raíces de la ecuación de segundo grado de coeficientes
+rales. ax^2+bx+c=0 x= -b+-raiz(b^2-4ac)/2a*/
 import java.util.Scanner;
 
 public class Operadores {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        double a,b, resultado;
+        double a,b,c, resultado1, resultado2;
 
-        System.out.println("Digite el valor de a: ");
+        System.out.print("Digite el valor de a: ");
         a = entrada.nextDouble();
-        System.out.println("Digite el valor de b: ");
+        System.out.print("Digite el valor de b: ");
         b = entrada.nextDouble();
+        System.out.print("Digite el valor de c: ");
+        c = entrada.nextDouble();
 
-        resultado = Math.pow(a,2) + Math.pow(b,2) + (2*a*b);
+        resultado1 = (-b+Math.sqrt(Math.pow(b,2) - (4*a*c))) / (2*a);
+        resultado2 = (-b-Math.sqrt(Math.pow(b,2) - (4*a*c))) / (2*a);
 
-        System.out.println("El resultado es: "+resultado);
+        System.out.println("\nLa raiz1 es: "+resultado1);
+        System.out.println("\nLa raiz2 es: "+resultado2);
+
     }
 
 }
